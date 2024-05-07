@@ -1,0 +1,36 @@
+{
+    "name": "Hide Distractions",
+    "version": "1.0.0",
+    "description": "Block non-essential sections and sources of distraction on websites.",
+    "manifest_version": 3,
+    "author": "Lucas Gomes (lugom.io)",
+    "icons": {
+        "48": "assets/img/hide-distractions-icon-48.png",
+        "128": "assets/img/hide-distractions-icon-128.png"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Hide Distractions"
+    },
+    "permissions": [
+        "tabs",
+        "webNavigation",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.facebook.com/*",
+                "*://*.instagram.com/*",
+                "*://*.twitter.com/*",
+                "*://*.youtube.com/*",
+                "*://*.reddit.com/*",
+                "*://*.netflix.com/*"
+            ],
+            "js": [
+                "assets/js/content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}

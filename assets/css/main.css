@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "apple color emoji", "segoe ui emoji", "Segoe UI Symbol", "noto color emoji";
+    font-size: 62.5%;
+
+    --app-bg: #242424;
+    --card-bg: rgba(0, 0, 0, 0.2);
+    --toggle-bg: #ffffff;
+    --toggle-button-disabled-bg: #ff4545;
+    --toggle-button-enabled-bg: #13e973;
+
+    --logo-text-color: #ffffff;
+    --text-color-gray: #979797;
+    --text-color-white: #ffffff;
+}
+
+body {
+    background-color: var(--app-bg);
+    min-width: 550px;
+}
+
+#hide-distractions {
+    margin: 0 auto;
+    padding: 3.2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+#hide-distractions header {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+#hide-distractions header .logo {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+#hide-distractions .logo h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+    color: var(--logo-text-color);
+}
+
+#hide-distractions header p {
+    font-size: 1.6rem;
+    color: var(--text-color-gray);
+}
+
+#hide-distractions main {
+    display: grid;
+    grid-template: repeat(3, 6.4rem) / auto auto;
+    gap: 1.8rem;
+}
+
+#hide-distractions main .card,
+.card .desc {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+#hide-distractions main .card {
+    background-color: var(--card-bg);
+    padding: 1.2rem;
+    border-radius: .8rem;
+    justify-content: space-between;
+}
+
+#hide-distractions .card .desc h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-color-white);
+}
+
+#hide-distractions .card .toggle {
+    width: 4rem;
+    height: 2.4rem;
+    border-radius: 3rem;
+    background-color: var(--toggle-bg);
+
+    position: relative;
+    cursor: pointer;
+}
+
+#hide-distractions .card .toggle::before {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--toggle-button-disabled-bg);
+
+    position: absolute;
+    top: 50%;
+    left: 2px;
+
+    transform: translateY(-50%);
+    transition: all .2s;
+}
+
+#hide-distractions .card .toggle.active::before {
+    left: calc(100% - 2px);
+    transform: translate(-100%, -50%);
+
+    background-color: var(--toggle-button-enabled-bg);
+}
+
+#hide-distractions footer {
+    text-align: center;
+}
+
+#hide-distractions footer span {
+    color: var(--text-color-white);
+    font-size: 1.4rem;
+}
+
+#hide-distractions footer span a {
+    text-decoration: none;
+    color: var(--text-color-gray);
+    font-weight: 600;
+}
+
+#hide-distractions footer span a:hover {
+    color: var(--text-color-white);
+}
