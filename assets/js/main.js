@@ -8,9 +8,8 @@ chrome.storage.local.get(["HideDistractions"]).then((result) => {
                 facebook: false,
                 instagram: false,
                 youtube: false,
-                twitter: false,
-                reddit: false,
-                netflix: false
+                netflix: false,
+                tiktok: false
             }
         });
     }
