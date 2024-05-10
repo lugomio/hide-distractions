@@ -43,5 +43,7 @@ Hide Distractions is an extension that allows you to block non-essential section
 4. Click on "Load unpacked" and select the directory of the cloned project.
 5. The Hide Distractions extension is now installed and active in Chrome.
 
+Or use the chrome web store: [Hide Distractions](https://chromewebstore.google.com/detail/hide-distractions/ehkadikghampbagpilgidfnmbhedabek?hl=en)
+
 ## License
 This project is licensed under the [MIT License](LICENSE.md).
