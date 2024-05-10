@@ -13,9 +13,6 @@
         "default_title": "Hide Distractions"
     },
     "permissions": [
-        "tabs",
-        "activeTab",
-        "webNavigation",
         "storage"
     ],
     "content_scripts": [
